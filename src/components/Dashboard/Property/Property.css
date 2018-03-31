@@ -1,0 +1,9 @@
+#Property__container {
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 25px;
+    width: 500px;
+    height: 400px;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
