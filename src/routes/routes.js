@@ -24,8 +24,6 @@ export default (
     <Route component={ View4 } path="/wizard/view4" />
     <Route component={ View5 } path="/wizard/view5" />
     <Route component={ Wizard } path="/wizard" />
-
-    
   </Switch>
 )
 

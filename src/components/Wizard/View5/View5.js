@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import './View5.css'
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { updateWizard, resetWizard, createProperty } from "../../../ducks/reducer";
@@ -37,7 +38,7 @@ class Step5 extends Component {
     const { updateWizard } = this.props;
 
     return (
-      <div>
+      <div className="step_five">
         <p>Step 5 here</p>
 
         <span>Recommended Rent: { recommended_rent }</span>
@@ -53,7 +54,7 @@ class Step5 extends Component {
           Previous Step
         </Link>
 
-        <button onClick={ this.finishWizard }>Complete</button>
+        <Link to="/Dashboard/Dashboard"> <button onClick={ this.finishWizard }>Complete</button> </Link>
       </div>
     )
   }

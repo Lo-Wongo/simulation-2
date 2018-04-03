@@ -21,7 +21,7 @@ const {
 //Top-level middleware
 const app = express();
 
-app.use( express.static( `${__dirname}/../build` ) );
+
 
 //connecting server to database using massive
 massive( CONNECTION_STRING ).then( dbInstance => {
@@ -37,7 +37,9 @@ app.use( session({
   resave: false,
   saveUninitialized: false
 }));
+
 app.use( require(`${__dirname}../../middlewares/auth`) );
+app.use( express.static( `${__dirname}/../build` ) );
 
 
 //====user endpoints========
@@ -50,6 +52,11 @@ app.post('/', controller.create);
 app.get('/', controller.readAll);
 app.delete('/:id', controller.delete);
 app.get('/filter', controller.filter);
+
+app.post('/api/properties', controller.create);
+app.get('/api/properties', controller.readAll);
+app.delete('/api/properties/:id', controller.delete);
+app.get('/api/properties/filter', controller.filter);
 
 
 

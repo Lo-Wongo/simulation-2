@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import './View1.css';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { updateWizard } from "../../../ducks/reducer";
@@ -25,7 +26,7 @@ class Step1 extends Component {
     const { updateWizard } = this.props;
 
     return (
-      <div>
+      <div className="step_one">
         <p>Step 1 here</p>
 
         <span>Property Name:</span>

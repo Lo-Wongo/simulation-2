@@ -1,4 +1,4 @@
-CREATE TABLE properties (
+CREATE TABLE Properties (
   PropertyId SERIAL PRIMARY KEY,
   UserId INT,
   Name TEXT,

@@ -6,6 +6,7 @@ import { logout, getProperties, deleteProperty, filterProperties } from "../../d
 import { connect } from "react-redux";
 
 import Property from './Property/Property';
+import './Dashboard.css';
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -36,11 +37,11 @@ class Dashboard extends Component {
     ));
 
     return (
-      <div onSubmit={this.handleSubmit}>
+      <div className="dashboard" onSubmit={this.handleSubmit}>
         <p> House Dashboard </p>
 
         <Link to="/wizard/view1">
-          <button>Add new property</button>
+          <button className="add_btn" >Add new property</button>
         </Link>
 
         <Filter getProperties={ getProperties } filterProperties={ filterProperties } />
